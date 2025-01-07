@@ -1,0 +1,10 @@
+services:
+  line_py_webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: line_py_webhook
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
